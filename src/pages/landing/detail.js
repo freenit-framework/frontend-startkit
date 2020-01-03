@@ -14,7 +14,7 @@ class Landing extends Component {
     const styles = getStyles(this.props.theme, height);
     return (
       <Template style={{}}>
-        <div>
+        <div style={styles.root}>
           <h1>
             Freenit Framework
           </h1>

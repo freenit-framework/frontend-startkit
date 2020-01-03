@@ -9,7 +9,6 @@ import {
 } from 'components'
 import Template from 'templates/default/detail'
 
-
 import styles from './styles'
 
 
