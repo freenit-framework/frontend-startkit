@@ -5,7 +5,6 @@ import {
   Paper,
 } from '@material-ui/core'
 import getStyles from './styles'
-import Template from 'templates/default/detail'
 
 
 class Landing extends Component {
@@ -13,19 +12,17 @@ class Landing extends Component {
     const height = this.props.height || 'calc(100vh - 64px - 40px)'
     const styles = getStyles(this.props.theme, height);
     return (
-      <Template style={{}}>
-        <div style={styles.root}>
-          <h1>
-            Freenit Framework
-          </h1>
-          <div style={styles.small}>
-            Startkit for fast React development
-          </div>
-          <Paper style={styles.freenit}>
-            Freenit
-          </Paper>
+      <div style={styles.root}>
+        <h1>
+          Freenit Framework
+        </h1>
+        <div style={styles.small}>
+          Startkit for fast React development
         </div>
-      </Template>
+        <Paper style={styles.freenit}>
+          Freenit
+        </Paper>
+      </div>
     )
   }
 }

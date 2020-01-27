@@ -4,12 +4,12 @@ import React, { useState } from 'react'
 import {
   Auth,
   Me,
+  Resolution,
   Role,
   Store,
   User,
 } from 'freenit'
 import Landing from 'pages/landing'
-import Resolution from 'pages/resolution'
 import { withRouter } from 'react-router-dom'
 
 // Templates
