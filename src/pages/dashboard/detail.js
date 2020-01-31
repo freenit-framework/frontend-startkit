@@ -6,7 +6,7 @@ import {
 import {
   RoleList,
   UserList,
-} from 'components'
+} from 'freenit'
 import Template from 'templates/default/detail'
 
 import styles from './styles'
