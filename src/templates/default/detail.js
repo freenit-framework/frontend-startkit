@@ -18,7 +18,7 @@ import {
 // Icons
 import CloseIcon from '@material-ui/icons/Clear'
 import DashboardIcon from '@material-ui/icons/Dashboard'
-import MeIcon from '@material-ui/icons/AccountCircle'
+import ProfileIcon from '@material-ui/icons/AccountCircle'
 import ReorderIcon from '@material-ui/icons/Reorder'
 import UserIcon from '@material-ui/icons/PeopleOutline'
 import RoleIcon from '@material-ui/icons/People'
@@ -74,10 +74,10 @@ class Template extends React.Component {
           </Link>
         ),
         (
-          <Link to="/me" key="me">
+          <Link to="/profile" key="profile">
             <MenuItem>
               <ListItemIcon>
-                <MeIcon />
+                <ProfileIcon />
               </ListItemIcon>
               Me
             </MenuItem>
