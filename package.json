@@ -3,20 +3,20 @@
   "version": "0.0.1",
   "private": false,
   "dependencies": {
-    "freenit": "^0.0.6",
+    "freenit": "^0.0.10",
     "prop-types": "^15.7.2",
     "radium": "^0.26.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^3.4.0"
   },
   "devDependencies": {
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "http-proxy-middleware": "^0.20.0",
-    "jest-enzyme": "^7.1.1",
-    "react-test-renderer": "^16.10.2"
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "http-proxy-middleware": "^1.0.1",
+    "jest-enzyme": "^7.1.2",
+    "react-test-renderer": "^16.13.0"
   },
   "jest": {
     "collectCoverageFrom": [
