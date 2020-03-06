@@ -24,11 +24,11 @@ const StoreProvider = (props) => {
     auth: new Auth.store(useState(Auth.initial.detail)),
     history: props.history,
     landing: new Landing.store(useState(Landing.initial.detail)),
-    me: new Profile.store(
-      useState(Profile.initial.detail),
-    ),
     notification: new EmptyTemplate.store(
       useState(EmptyTemplate.initial.detail),
+    ),
+    profile: new Profile.store(
+      useState(Profile.initial.detail),
     ),
     resolution: new Resolution.store(useState(Resolution.initial.detail)),
     role: new Role.store(
