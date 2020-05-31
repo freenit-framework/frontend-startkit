@@ -1,6 +1,6 @@
 {
-  "name": "freenit-startkit",
-  "version": "0.0.1",
+  "name": "create-freenit",
+  "version": "0.0.3",
   "private": false,
   "dependencies": {
     "freenit": "^0.0.12",
@@ -49,5 +49,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "bin": "create-freenit"
 }
