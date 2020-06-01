@@ -21,5 +21,7 @@ ansible/roles/*
 ansible/site.yml
 project.conf
 site.retry
+project.mk
+templates/fstab
 vars.mk
 yarn-error.log
