@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "private": false,
   "dependencies": {
-    "freenit": "^0.0.14",
+    "freenit": "^0.0.15",
     "prop-types": "^15.7.2",
     "radium": "^0.26.0",
     "react": "^16.13.0",
