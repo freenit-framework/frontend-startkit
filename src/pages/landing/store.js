@@ -1,4 +1,3 @@
-import service from './service'
 import initial from './initial'
 
 
@@ -10,9 +9,9 @@ export default class LandingStore {
 
   send = async () => {
     try {
-      const response = await service.send(this.organizer)
+      const response = await window.rest.post('/landing/form', this.organizer)
       const result = {
-        ...response,
+        ...response.data,
         ok: true
       }
       this.setDetail(result)

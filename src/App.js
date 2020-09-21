@@ -1,5 +1,5 @@
 import React from 'react'
-import StoreProvider from 'store/provider'
+import Store from 'store'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import { Style } from 'radium'
@@ -14,9 +14,9 @@ export default () => {
     <ThemeProvider theme={theme}>
       <Style rules={styles} />
         <Router>
-          <StoreProvider>
+          <Store>
             <Routing />
-          </StoreProvider>
+          </Store>
         </Router>
     </ThemeProvider>
   )
