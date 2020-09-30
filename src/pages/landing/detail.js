@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { withTheme } from '@material-ui/core/styles'
 import {
@@ -9,7 +9,7 @@ import Template from 'templates/default/detail'
 import getStyles from './styles'
 
 
-class Landing extends Component {
+class Landing extends React.Component {
   render() {
     const height = this.props.height || 'calc(100vh - 64px - 40px)'
     const styles = getStyles(this.props.theme, height);
