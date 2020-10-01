@@ -4,7 +4,7 @@
   "private": false,
   "dependencies": {
     "axios": "^0.20.0",
-    "freenit": "^0.0.16",
+    "freenit": "^0.0.20",
     "prop-types": "^15.7.2",
     "radium": "^0.26.0",
     "react": "^16.13.1",
