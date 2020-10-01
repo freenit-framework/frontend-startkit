@@ -4,8 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 // Pages
 import {
   Auth,
-  Profile,
   NoPage,
+  Profile,
   rest,
 } from 'freenit'
 import Dashboard from 'pages/dashboard'

@@ -4,11 +4,12 @@
   "private": false,
   "dependencies": {
     "axios": "^0.20.0",
-    "freenit": "^0.0.20",
+    "freenit": "^0.0.25",
     "prop-types": "^15.7.2",
     "radium": "^0.26.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3"
   },
   "devDependencies": {
