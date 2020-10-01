@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Store from 'store'
+import { StoreProvider } from 'store-provider'
 import { MemoryRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import { Style } from 'radium'
@@ -15,9 +15,9 @@ const TestApp = (props) => {
     <ThemeProvider theme={theme}>
       <Style rules={styles} />
       <Router initialEntries={[props.path]} initialIndex={0}>
-        <Store>
+        <StoreProvider>
           <Routing />
-        </Store>
+        </StoreProvider>
       </Router>
     </ThemeProvider>
   )
