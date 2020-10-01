@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { withStore, EmptyTemplate } from 'freenit'
 
 // Components
@@ -36,7 +36,7 @@ class Template extends React.Component {
     const { auth  } = this.props.store
     const response = await auth.logout()
     if (response.ok === undefined) {
-      this.props.history.push('/')
+      this.props.store.history.push('/')
     }
   }
 
@@ -183,12 +183,10 @@ class Template extends React.Component {
 
 Template.propTypes = {
   children: PropTypes.node,
-  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   secure: PropTypes.bool,
   style: PropTypes.shape({}),
   title: PropTypes.string,
 }
 
 
-export default withRouter(withStore(Template))
-
+export default withStore(Template)
