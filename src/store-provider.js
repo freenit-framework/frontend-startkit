@@ -8,18 +8,16 @@ import {
   Role,
   Store,
   User,
+  EmptyTemplate,
 } from 'freenit'
-import Landing from 'pages/landing'
 import { withRouter } from 'react-router-dom'
-
-// Templates
-import { EmptyTemplate } from 'freenit'
+import Landing from 'pages/landing'
 
 
 export const data = {}
 
 
-const StoreProvider = (props) => {
+const Provider = (props) => {
   const store = {
     auth: new Auth.store(useState(Auth.initial.detail)),
     history: props.history,
@@ -49,4 +47,4 @@ const StoreProvider = (props) => {
 }
 
 
-export default withRouter(StoreProvider)
+export const StoreProvider = withRouter(Provider)
