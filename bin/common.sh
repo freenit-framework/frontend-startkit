@@ -23,7 +23,7 @@ setup() {
 
   cd ${PROJECT_ROOT}
   update=${1}
-  if [ "${OFFLINE}" != "yes" -o "${update}" != "no" ]; then
+  if [ "${OFFLINE}" != "yes" -a "${update}" != "no" ]; then
     "${PACKAGE_MANAGER}" install
   fi
 }
