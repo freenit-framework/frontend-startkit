@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "private": false,
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "freenit": "^0.0.25",
     "prop-types": "^15.7.2",
     "radium": "^0.26.0",
