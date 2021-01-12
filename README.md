@@ -11,5 +11,5 @@ bin/devel.sh
 To run tests:
 ```
 bin/init.sh
-bin/devel.sh
+bin/test.sh
 ```
