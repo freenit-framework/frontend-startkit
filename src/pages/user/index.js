@@ -1,8 +1,11 @@
-import detail from './detail'
-import list from './list'
+import Detail from './detail'
+import List from './list'
 
 
-export default {
-  detail,
-  list,
+const styles = {
+  Detail,
+  List,
 }
+
+
+export default styles
