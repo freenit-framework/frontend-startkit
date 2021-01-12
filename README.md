@@ -1,5 +1,7 @@
 # Freenit Frontend
 
+### [Tutorial](https://github.com/freenit-framework/frontend-tutorial)
+
 This repo will be downloaded on `yarn create freenit <project>` and it will be cleaned up for your project. For example `name.ini` will contain the name you provided as `<project>`.
 
 ### Shell Scripts
@@ -32,5 +34,3 @@ To run tests:
 echo DEVEL_MODE=YES >vars.mk
 make test
 ```
-
-### [Tutorial](https://github.com/freenit-framework/frontend-tutorial)
