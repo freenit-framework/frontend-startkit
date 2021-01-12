@@ -8,6 +8,10 @@ To star development:
 bin/init.sh
 bin/devel.sh
 ```
+If you use it with the backend, run it like this:
+```
+env BACKEND_URL=<url> bin/devel.sh
+```
 
 To run tests:
 ```
@@ -21,6 +25,7 @@ To start development:
 echo DEVEL_MODE=YES >vars.mk
 make devel
 ```
+To run it with the backend, consider running it with [Freenit Project](https://github.com/freenit-framework/freenit)
 
 To run tests:
 ```
