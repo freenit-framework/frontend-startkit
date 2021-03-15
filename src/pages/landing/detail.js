@@ -1,18 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { withTheme } from '@material-ui/core/styles'
-import {
-  Paper,
-} from '@material-ui/core'
+import { Button } from '@material-ui/core'
 
 import Template from 'templates/default/detail'
-import getStyles from './styles'
+import styles from './styles'
 
 
 class Landing extends React.Component {
   render() {
-    const height = this.props.height || 'calc(100vh - 64px - 40px)'
-    const styles = getStyles(this.props.theme, height);
     return (
       <Template style={styles.root}>
         <h1>
@@ -21,18 +16,12 @@ class Landing extends React.Component {
         <div style={styles.small}>
           Startkit for fast React development
         </div>
-        <Paper style={styles.freenit}>
+        <Button color="primary" variant="contained" style={styles.freenit}>
           Freenit
-        </Paper>
+        </Button>
       </Template>
     )
   }
-}
-
-
-Landing.propTypes = {
-  height: PropTypes.number,
-  theme: PropTypes.shape({}).isRequired,
 }
 
 

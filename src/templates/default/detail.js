@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { withStore, EmptyTemplate } from 'freenit'
+import { auth, withStore, EmptyTemplate } from 'freenit'
 
 // Components
 import {
@@ -33,23 +32,16 @@ class Template extends React.Component {
   }
 
   handleLogout = async () => {
-    const { auth  } = this.props.store
     const response = await auth.logout()
-    if (response.ok === undefined) {
-      this.props.store.history.push('/')
-    }
+    if (response.ok) { this.props.store.history.push('/') }
   }
 
-  handleMenuOpen = () => {
-    this.setState({ showMenu: true })
-  }
+  handleMenuOpen = () => { this.setState({ showMenu: true }) }
 
-  handleMenuClose = () => {
-    this.setState({ showMenu: false })
-  }
+  handleMenuClose = () => { this.setState({ showMenu: false }) }
 
   render() {
-    const { auth, profile, resolution } = this.props.store
+    const { profile, resolution } = this.props.store
     const AnonButton = (
       <Link to="/login" style={styles.login}>
         <IconButton color="inherit">
@@ -62,7 +54,7 @@ class Template extends React.Component {
         <LogoutIcon />
       </IconButton>
     )
-    const AuthButton = auth.detail.ok ? LoggedinButton : AnonButton
+    const AuthButton = auth.authenticated() ? LoggedinButton : AnonButton
     const AdminMenu = profile.detail.admin
       ? [
         (
@@ -96,7 +88,7 @@ class Template extends React.Component {
           </Link>
         ),
       ] : []
-    const LoggingMenu = auth.detail.ok
+    const LoggingMenu = auth.authenticated()
       ? (
         <MenuItem onClick={this.handleLogout}>
           <ListItemIcon>
@@ -114,7 +106,7 @@ class Template extends React.Component {
           </MenuItem>
         </Link>
       )
-    const AuthMenu = auth.detail.ok
+    const AuthMenu = auth.authenticated()
       ? [
         (
           <Link to="/profile" key="profile">
@@ -129,7 +121,7 @@ class Template extends React.Component {
         ...AdminMenu,
       ]
       : null
-    const BarLinks = resolution.detail.width > 410
+    const BarLinks = resolution.width > 410
       ? (
         <div>
           {AuthButton}
@@ -178,14 +170,6 @@ class Template extends React.Component {
       </div>
     )
   }
-}
-
-
-Template.propTypes = {
-  children: PropTypes.node,
-  secure: PropTypes.bool,
-  style: PropTypes.shape({}),
-  title: PropTypes.string,
 }
 
 
