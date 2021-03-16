@@ -1,25 +1,22 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-// Pages
 import {
   Auth,
-  NoPage,
   Profile,
-  rest,
+  NoPage,
 } from 'freenit'
-import Dashboard from 'pages/dashboard'
-import Landing from 'pages/landing'
-import Role from 'pages/role'
-import User from 'pages/user'
 
 
-const API_ROOT = '/api/v0'
+import {
+  Dashboard,
+  Landing,
+  Role,
+  User,
+} from 'pages'
 
 
 const Routing = () => {
-  window.rest = rest(API_ROOT)
-  window.rest.API_ROOT = API_ROOT
   return (
     <Switch>
       <Route exact path="/" component={Landing.Detail} />

@@ -1,11 +1,13 @@
 import Detail from './detail'
 import List from './list'
+import { User } from 'freenit'
 
 
-const styles = {
+const user = {
+  ...User,
   Detail,
   List,
 }
 
 
-export default styles
+export default user

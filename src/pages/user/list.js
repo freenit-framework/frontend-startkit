@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-  User,
-} from 'freenit'
+import { User } from 'freenit'
 import Template from 'templates/default/detail'
 
 
