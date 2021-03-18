@@ -3,6 +3,8 @@
   "version": "0.0.5",
   "private": false,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
     "freenit": "^0.1.13",
     "mobx": "^6.1.8",
