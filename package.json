@@ -1,68 +1,9 @@
 {
-  "name": "create-freenit",
-  "version": "0.0.5",
+  "name": "startkit",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "BSD-2-Clause",
   "private": false,
-  "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "axios": "^0.21.1",
-    "freenit": "^0.1.13",
-    "mobx": "^6.1.8",
-    "mobx-react": "^7.1.0",
-    "prop-types": "^15.7.2",
-    "radium": "^0.26.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
-    "web-vitals": "^1.0.1"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.12.1",
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.1",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
-    "enzyme": "^3.11.0",
-    "http-proxy-middleware": "^1.0.6",
-    "jest-enzyme": "^7.1.2",
-    "jest-junit": "^12.0.0",
-    "react-test-renderer": "^17.0.1",
-    "regenerator-runtime": "^0.13.7"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!<rootDir>/node_modules/",
-      "!src/**/{mock,service,styles}.js",
-      "!src/{pages,templates}/*/index.js",
-      "!src/{App,index,theme}.js",
-      "!src/serviceWorker.js",
-      "!src/setupProxy.js"
-    ]
-  },
-  "jest-junit": {
-    "suiteName": "jest tests",
-    "outputDirectory": ".",
-    "outputName": "junit.xml",
-    "uniqueOutputName": "false"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --testResultsProcessor=jest-junit --color --coverage",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -75,5 +16,34 @@
       "last 1 safari version"
     ]
   },
-  "bin": "create-freenit"
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@freenit-framework/cli": "^0.0.10",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-image": "^2.0.6",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "rollup": "^2.46.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-visualizer": "^5.4.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "start": "webpack serve"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "freenit": "^0.1.14",
+    "mobx": "^6.3.0",
+    "mobx-react": "^7.1.0",
+    "radium": "^0.26.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7"
+  }
 }
