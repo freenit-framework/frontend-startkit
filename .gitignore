@@ -1,6 +1,14 @@
 node_modules
 dist/*
 !dist/index.html
+!dist/favicon.ico
 *.lock
 stats.html
+cbsd.conf
 project.mk
+ansible/group_vars/all
+ansible/inventory/inventory
+ansible/roles/*
+!ansible/roles/.keep
+ansible/site.yml
+site.retry
