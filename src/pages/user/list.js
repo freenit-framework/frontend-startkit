@@ -1,7 +1,6 @@
 import React from 'react'
-import { User } from 'freenit'
+import { User } from '@freenit-framework/core'
 import Template from 'templates/default/detail'
-
 
 class UserList extends React.Component {
   render() {
@@ -12,6 +11,5 @@ class UserList extends React.Component {
     )
   }
 }
-
 
 export default UserList

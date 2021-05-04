@@ -1,10 +1,5 @@
-import { store } from 'freenit'
+import { store } from '@freenit-framework/core'
 
+store.auth.init('/api/v0')
 
-const mystore = {
-  ...store,
-}
-mystore.auth.init('/api/v0')
-
-
-export default mystore
+export default store

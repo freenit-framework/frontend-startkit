@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { auth, withStore, EmptyTemplate } from 'freenit'
+import { auth, EmptyTemplate } from '@freenit-framework/core'
+import store from 'store'
 
 // Components
 import {
@@ -25,7 +26,6 @@ import UserIcon from '@material-ui/icons/PeopleOutline'
 
 import styles from './styles'
 
-
 class Template extends React.Component {
   state = {
     showMenu: false,
@@ -33,15 +33,21 @@ class Template extends React.Component {
 
   handleLogout = async () => {
     const response = await auth.logout()
-    if (response.ok) { this.props.store.history.push('/') }
+    if (response.ok) {
+      store.history.push('/')
+    }
   }
 
-  handleMenuOpen = () => { this.setState({ showMenu: true }) }
+  handleMenuOpen = () => {
+    this.setState({ showMenu: true })
+  }
 
-  handleMenuClose = () => { this.setState({ showMenu: false }) }
+  handleMenuClose = () => {
+    this.setState({ showMenu: false })
+  }
 
   render() {
-    const { profile, resolution } = this.props.store
+    const { profile, resolution } = store
     const AnonButton = (
       <Link to="/login" style={styles.login}>
         <IconButton color="inherit">
@@ -57,7 +63,6 @@ class Template extends React.Component {
     const AuthButton = auth.authenticated() ? LoggedinButton : AnonButton
     const AdminMenu = profile.detail.admin
       ? [
-        (
           <Link to="/dashboard" key="dashboard">
             <MenuItem>
               <ListItemIcon>
@@ -65,9 +70,7 @@ class Template extends React.Component {
               </ListItemIcon>
               Dashboard
             </MenuItem>
-          </Link>
-        ),
-        (
+          </Link>,
           <Link to="/users" key="users">
             <MenuItem>
               <ListItemIcon>
@@ -75,9 +78,7 @@ class Template extends React.Component {
               </ListItemIcon>
               Users
             </MenuItem>
-          </Link>
-        ),
-        (
+          </Link>,
           <Link to="/roles" key="roles">
             <MenuItem>
               <ListItemIcon>
@@ -85,30 +86,28 @@ class Template extends React.Component {
               </ListItemIcon>
               Roles
             </MenuItem>
-          </Link>
-        ),
-      ] : []
-    const LoggingMenu = auth.authenticated()
-      ? (
-        <MenuItem onClick={this.handleLogout}>
+          </Link>,
+        ]
+      : []
+    const LoggingMenu = auth.authenticated() ? (
+      <MenuItem onClick={this.handleLogout}>
+        <ListItemIcon>
+          <LogoutIcon />
+        </ListItemIcon>
+        Logout
+      </MenuItem>
+    ) : (
+      <Link to="/login">
+        <MenuItem>
           <ListItemIcon>
-            <LogoutIcon />
+            <LoginIcon />
           </ListItemIcon>
-          Logout
+          Login
         </MenuItem>
-      ) : (
-        <Link to="/login">
-          <MenuItem>
-            <ListItemIcon>
-              <LoginIcon />
-            </ListItemIcon>
-            Login
-          </MenuItem>
-        </Link>
-      )
+      </Link>
+    )
     const AuthMenu = auth.authenticated()
       ? [
-        (
           <Link to="/profile" key="profile">
             <MenuItem>
               <ListItemIcon>
@@ -116,17 +115,11 @@ class Template extends React.Component {
               </ListItemIcon>
               Profile
             </MenuItem>
-          </Link>
-        ),
-        ...AdminMenu,
-      ]
+          </Link>,
+          ...AdminMenu,
+        ]
       : null
-    const BarLinks = resolution.width > 410
-      ? (
-        <div>
-          {AuthButton}
-        </div>
-      ) : null
+    const BarLinks = resolution.width > 410 ? <div>{AuthButton}</div> : null
     return (
       <div>
         <AppBar position="static">
@@ -142,7 +135,10 @@ class Template extends React.Component {
             {BarLinks}
           </Toolbar>
         </AppBar>
-        <EmptyTemplate.Detail secure={this.props.secure} style={this.props.style}>
+        <EmptyTemplate.Detail
+          secure={this.props.secure}
+          style={this.props.style}
+        >
           {this.props.children}
           <Drawer open={this.state.showMenu} onClose={this.handleMenuClose}>
             <AppBar position="static">
@@ -172,5 +168,4 @@ class Template extends React.Component {
   }
 }
 
-
-export default withStore(Template)
+export default Template

@@ -1,16 +1,10 @@
 import React from 'react'
-import {
-  Paper,
-} from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 
-import {
-  RoleList,
-  UserList,
-} from 'freenit'
+import { RoleList, UserList } from '@freenit-framework/core'
 import Template from 'templates/default/detail'
 
 import styles from './styles'
-
 
 class AdminDashboard extends React.Component {
   render() {
@@ -24,6 +18,5 @@ class AdminDashboard extends React.Component {
     )
   }
 }
-
 
 export default AdminDashboard

@@ -1,9 +1,6 @@
 import React from 'react'
-import {
-  Role,
-} from 'freenit'
+import { Role } from '@freenit-framework/core'
 import Template from 'templates/default/detail'
-
 
 class RoleDetail extends React.Component {
   render() {
@@ -14,6 +11,5 @@ class RoleDetail extends React.Component {
     )
   }
 }
-
 
 export default RoleDetail

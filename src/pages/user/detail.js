@@ -1,7 +1,6 @@
 import React from 'react'
-import { User } from 'freenit'
+import { User } from '@freenit-framework/core'
 import Template from 'templates/default/detail'
-
 
 class UserDetail extends React.Component {
   render() {
@@ -12,6 +11,5 @@ class UserDetail extends React.Component {
     )
   }
 }
-
 
 export default UserDetail
