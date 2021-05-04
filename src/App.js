@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import { Style } from 'radium'
+import { StoreProvider } from '@freenit-framework/core'
 
 import store from 'store'
 import Routing from 'routing'
@@ -13,6 +14,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Style rules={styles} />
       <Router>
+        <StoreProvider />
         <Routing />
       </Router>
     </ThemeProvider>
