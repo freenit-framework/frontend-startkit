@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { auth, EmptyTemplate } from '@freenit-framework/core'
+import { EmptyTemplate } from '@freenit-framework/core'
 import store from 'store'
 
 // Components
@@ -32,7 +32,7 @@ class Template extends React.Component {
   }
 
   handleLogout = async () => {
-    const response = await auth.logout()
+    const response = await store.auth.logout()
     if (response.ok) {
       store.history.push('/')
     }
@@ -47,7 +47,7 @@ class Template extends React.Component {
   }
 
   render() {
-    const { profile, resolution } = store
+    const { auth, profile, resolution } = store
     const AnonButton = (
       <Link to="/login" style={styles.login}>
         <IconButton color="inherit">
