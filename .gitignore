@@ -1,7 +1,5 @@
 node_modules
-dist/*
-!dist/index.html
-!dist/favicon.ico
+dist
 *.lock
 stats.html
 cbsd.conf

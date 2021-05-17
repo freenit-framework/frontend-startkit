@@ -17,27 +17,18 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@freenit-framework/cli": "^0.0.13",
-    "@rollup/plugin-commonjs": "^18.0.0",
-    "@rollup/plugin-image": "^2.0.6",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.2.1",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "rollup": "^2.46.0",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-visualizer": "^5.4.1"
+    "@freenit-framework/cli": "^0.0.18"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "webpack build --mode=production",
     "start": "webpack serve"
   },
   "dependencies": {
-    "@freenit-framework/core": "^0.0.13",
+    "@freenit-framework/core": "^0.0.14",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
+    "html-webpack-plugin": "^5.3.1",
     "mobx": "^6.3.0",
     "mobx-react": "^7.1.0",
     "radium": "^0.26.1",
